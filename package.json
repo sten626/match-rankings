@@ -19,8 +19,9 @@
   },
   "type": "module",
   "devDependencies": {
-    "@types/node": "^26.1.2",
-    "prettier": "^3.9.6",
-    "typescript": "^7.0.2"
+    "@types/node": "catalog:",
+    "prettier": "catalog:",
+    "tsx": "catalog:",
+    "typescript": "catalog:"
   }
 }
