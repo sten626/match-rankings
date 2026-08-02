@@ -1,5 +1,5 @@
-import { Router } from "express";
-import { db } from "../db/connection";
+import { Router } from 'express';
+import { db } from '../db/connection';
 
 // interface PlayerBody {
 //   name?: string;
@@ -16,20 +16,20 @@ import { db } from "../db/connection";
 
 const router: Router = Router({ mergeParams: true });
 
-router.get("/", (_, res) => {
-  db.any("SELECT * FROM players ORDER BY id").then((players) => {
+router.get('/', (_, res) => {
+  db.any('SELECT * FROM players ORDER BY id').then((players) => {
     res.json(players);
   });
 });
 
-router.get("/:id", (req, res) => {
+router.get('/:id', (req, res) => {
   const playerId = req.params.id;
-  db.oneOrNone("SELECT * FROM players WHERE id = $1", [playerId]).then(
+  db.oneOrNone('SELECT * FROM players WHERE id = $1', [playerId]).then(
     (player) => {
       if (player) {
         res.json(player);
       } else {
-        res.status(404).json({ error: "Player not found" });
+        res.status(404).json({ error: 'Player not found' });
       }
     },
   );

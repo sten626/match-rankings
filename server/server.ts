@@ -1,12 +1,12 @@
-import "dotenv/config";
-import express from "express";
-import { closeDb } from "./db/connection";
+import 'dotenv/config';
+import express from 'express';
+import { closeDb } from './db/connection';
 // import { errorHandler } from './middleware/errorHandler.js';
 // import { createRouter as createHealthRouter } from './routes/health.js';
 // import { createRouter as createPlayersRouter } from './routes/players.js';
 // import { createRouter as createEventsRouter } from './routes/events.js';
 // import { createRouter as createMatchesRouter } from './routes/matches.js';
-import { router as playersRouter } from "./routes/players";
+import { router as playersRouter } from './routes/players';
 
 const app = express();
 
@@ -21,9 +21,9 @@ app.use(express.json());
 
 // TODO: Error handling
 
-app.use("/api/players", playersRouter);
+app.use('/api/players', playersRouter);
 
-const port = Number(process.env["PORT"] ?? 3000);
+const port = Number(process.env['PORT'] ?? 3000);
 const server = app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
 });
@@ -35,10 +35,10 @@ function shutdown(signal: string): void {
     process.exit(0);
   });
   setTimeout(() => {
-    console.error("Forced shutdown");
+    console.error('Forced shutdown');
     process.exit(1);
   }, 10000);
 }
 
-process.on("SIGINT", () => shutdown("SIGINT"));
-process.on("SIGTERM", () => shutdown("SIGTERM"));
+process.on('SIGINT', () => shutdown('SIGINT'));
+process.on('SIGTERM', () => shutdown('SIGTERM'));

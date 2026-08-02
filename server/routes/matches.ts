@@ -1,5 +1,5 @@
-import { Router } from "express";
-import { db } from "../db/connection";
+import { Router } from 'express';
+import { db } from '../db/connection';
 
 // interface MatchBody {
 //   event_id?: number;
@@ -19,20 +19,20 @@ import { db } from "../db/connection";
 
 const router: Router = Router({ mergeParams: true });
 
-router.get("/", (_, res) => {
-  db.any("SELECT * FROM matches ORDER BY id").then((matches) => {
+router.get('/', (_, res) => {
+  db.any('SELECT * FROM matches ORDER BY id').then((matches) => {
     res.json(matches);
   });
 });
 
-router.get("/:id", (req, res) => {
+router.get('/:id', (req, res) => {
   const matchId = req.params.id;
-  db.oneOrNone("SELECT * FROM matches WHERE id = $1", [matchId]).then(
+  db.oneOrNone('SELECT * FROM matches WHERE id = $1', [matchId]).then(
     (match) => {
       if (match) {
         res.json(match);
       } else {
-        res.status(404).json({ error: "Match not found" });
+        res.status(404).json({ error: 'Match not found' });
       }
     },
   );

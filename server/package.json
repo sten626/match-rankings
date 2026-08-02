@@ -6,8 +6,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "tsx watch server.ts",
-    "typecheck": "tsc --noEmit -p tsconfig.json",
-    "lint": "tsc --noEmit -p tsconfig.json"
+    "format": "prettier --check \"**/*.ts\"",
+    "format:fix": "prettier --write \"**/*.ts\"",
+    "lint": "tsc --noEmit -p tsconfig.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
   },
   "keywords": [],
   "author": "",
@@ -27,6 +29,7 @@
   },
   "devDependencies": {
     "@types/express": "^5.0.6",
+    "prettier": "catalog:",
     "tsx": "catalog:",
     "typescript": "catalog:"
   }
