@@ -37,7 +37,7 @@ Agents should inspect the filesystem directly rather than relying on a static tr
 
 ```bash
 pnpm install
-pnpm --filter match-rankings-server dev
+pnpm --filter @match-rankings/server dev
 ```
 
 Ensure PostgreSQL is running and the `glicko` database exists.
@@ -57,7 +57,7 @@ DB_PASSWORD=<your_password>
 PORT=3000
 ```
 
-## Useful Commands (from server/ or with `pnpm --filter match-rankings-server`)
+## Useful Commands (from server/ or with `pnpm --filter @match-rankings/server`)
 
 | Command          | Description                       |
 | ---------------- | --------------------------------- |
