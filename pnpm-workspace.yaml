@@ -1,14 +1,16 @@
 packages:
-  - "app"
-  - "server"
+  - app
+  - server
 allowBuilds:
   '@parcel/watcher': true
   esbuild: true
   lmdb: true
   msgpackr-extract: true
 catalog:
-  "@types/node": ^26.1.2
+  '@angular/cdk': ^22.1.0
+  '@angular/material': ^22.1.0
+  '@types/node': ^26.1.2
   prettier: ^3.9.6
   tsx: ^4.23.1
   typescript: ^7.0.2
-catalogMode: "strict"
+catalogMode: 'strict'
