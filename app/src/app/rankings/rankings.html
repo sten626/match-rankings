@@ -1,25 +1,21 @@
-<table mat-table [dataSource]="dataSource">
-  <ng-container matColumnDef="name">
-    <th mat-header-cell *matHeaderCellDef>Name</th>
-    <td mat-cell *matCellDef="let element">{{ element.name }}</td>
-  </ng-container>
+@if (players$ | async; as players) {
+  <table mat-table [dataSource]="players">
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+    </ng-container>
 
-  <ng-container matColumnDef="rating">
-    <th mat-header-cell *matHeaderCellDef>Rating</th>
-    <td mat-cell *matCellDef="let element">{{ element.rating }}</td>
-  </ng-container>
+    <ng-container matColumnDef="rating">
+      <th mat-header-cell *matHeaderCellDef>Rating</th>
+      <td mat-cell *matCellDef="let element">{{ element.rating }}</td>
+    </ng-container>
 
-  <ng-container matColumnDef="rd">
-    <th mat-header-cell *matHeaderCellDef>RD</th>
-    <td mat-cell *matCellDef="let element">{{ element.rd }}</td>
-  </ng-container>
+    <ng-container matColumnDef="rd">
+      <th mat-header-cell *matHeaderCellDef>RD</th>
+      <td mat-cell *matCellDef="let element">{{ element.rd }}</td>
+    </ng-container>
 
-  <tr mat-header-row *matHeaderRowDef="['name', 'rating', 'rd']"></tr>
-  <tr mat-row *matRowDef="let row; columns: ['name', 'rating', 'rd']"></tr>
-</table>
-
-<!-- @if (players$ | async; as players) {
-  @for (player of players; track player.id) {
-    <div>{{ player.name }} - {{ player.rating }} - {{ player.rd }}</div>
-  }
-} -->
+    <tr mat-header-row *matHeaderRowDef="['name', 'rating', 'rd']"></tr>
+    <tr mat-row *matRowDef="let row; columns: ['name', 'rating', 'rd']"></tr>
+  </table>
+}

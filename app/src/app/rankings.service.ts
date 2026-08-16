@@ -8,6 +8,6 @@ export class RankingsService {
   private http = inject(HttpClient);
 
   getRankings(): Observable<Player[]> {
-    return this.http.get<Player[]>('http://localhost:3000/api/players');
+    return this.http.get<Player[]>('/api/players');
   }
 }
