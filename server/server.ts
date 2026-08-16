@@ -1,5 +1,6 @@
 import 'dotenv/config';
 import express from 'express';
+import cors from 'cors';
 import { closeDb } from './db/connection';
 // import { errorHandler } from './middleware/errorHandler.js';
 // import { createRouter as createHealthRouter } from './routes/health.js';
@@ -11,6 +12,13 @@ import { router as playersRouter } from './routes/players';
 const app = express();
 
 app.use(express.json());
+
+const corsOrigin = (process.env['CORS_ORIGIN'] ?? 'http://localhost:4200,http://127.0.0.1:4200')
+  .split(',')
+  .map((o) => o.trim())
+  .filter((o) => o.length > 0);
+
+app.use(cors({ origin: corsOrigin }));
 
 // app.use('/health', createHealthRouter());
 // app.use('/api/players', createPlayersRouter());

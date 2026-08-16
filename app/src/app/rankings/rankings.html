@@ -17,3 +17,9 @@
   <tr mat-header-row *matHeaderRowDef="['name', 'rating', 'rd']"></tr>
   <tr mat-row *matRowDef="let row; columns: ['name', 'rating', 'rd']"></tr>
 </table>
+
+<!-- @if (players$ | async; as players) {
+  @for (player of players; track player.id) {
+    <div>{{ player.name }} - {{ player.rating }} - {{ player.rd }}</div>
+  }
+} -->

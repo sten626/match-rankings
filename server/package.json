@@ -23,12 +23,14 @@
   },
   "type": "module",
   "dependencies": {
-    "dotenv": "^17.4.2",
-    "express": "^5.2.1",
-    "pg-promise": "^12.7.0"
+    "cors": "catalog:",
+    "dotenv": "catalog:",
+    "express": "catalog:",
+    "pg-promise": "catalog:"
   },
   "devDependencies": {
-    "@types/express": "^5.0.6",
+    "@types/cors": "catalog:",
+    "@types/express": "catalog:",
     "prettier": "catalog:",
     "tsx": "catalog:",
     "typescript": "catalog:"

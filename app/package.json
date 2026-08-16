@@ -15,23 +15,23 @@
   "packageManager": "pnpm@11.18.0",
   "dependencies": {
     "@angular/cdk": "catalog:",
-    "@angular/common": "^22.1.0",
-    "@angular/compiler": "^22.1.0",
-    "@angular/core": "^22.1.0",
-    "@angular/forms": "^22.1.0",
+    "@angular/common": "catalog:",
+    "@angular/compiler": "catalog:",
+    "@angular/core": "catalog:",
+    "@angular/forms": "catalog:",
     "@angular/material": "catalog:",
-    "@angular/platform-browser": "^22.1.0",
-    "@angular/router": "^22.1.0",
-    "rxjs": "~7.8.0",
-    "tslib": "^2.3.0"
+    "@angular/platform-browser": "catalog:",
+    "@angular/router": "catalog:",
+    "rxjs": "catalog:",
+    "tslib": "catalog:"
   },
   "devDependencies": {
-    "@angular/build": "^22.1.2",
-    "@angular/cli": "^22.1.2",
-    "@angular/compiler-cli": "^22.1.0",
-    "jsdom": "^28.0.0",
+    "@angular/build": "catalog:",
+    "@angular/cli": "catalog:",
+    "@angular/compiler-cli": "catalog:",
+    "jsdom": "catalog:",
     "prettier": "catalog:",
-    "typescript": "~6.0.2",
-    "vitest": "^4.0.8"
+    "typescript": "catalog:",
+    "vitest": "catalog:"
   }
 }

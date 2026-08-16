@@ -37,7 +37,7 @@ Agents should inspect the filesystem directly rather than relying on a static tr
 
 ```bash
 pnpm install
-pnpm --filter @match-rankings/server dev
+pnpm dev
 ```
 
 Ensure PostgreSQL is running and the `glicko` database exists.
