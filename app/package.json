@@ -22,6 +22,7 @@
     "@angular/material": "catalog:",
     "@angular/platform-browser": "catalog:",
     "@angular/router": "catalog:",
+    "glicko2.ts": "catalog:",
     "rxjs": "catalog:",
     "tslib": "catalog:"
   },
