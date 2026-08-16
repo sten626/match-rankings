@@ -5,6 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "turbo run dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -22,6 +23,7 @@
     "@types/node": "catalog:",
     "prettier": "catalog:",
     "tsx": "catalog:",
+    "turbo": "catalog:",
     "typescript": "catalog:"
   }
 }
